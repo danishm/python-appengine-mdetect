@@ -14,13 +14,12 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 
 class MainPage(webapp2.RequestHandler):
-	''' A class to handle requests for the main page '''
+    ''' A class to handle requests for the main page '''
 
     def get(self):
         data = {'greeting': 'Hello World!'}
         template = JINJA_ENVIRONMENT.get_template('index.html')
         self.response.write(template.render(data))
-
 
 # Creating the actual application object
 app = webapp2.WSGIApplication([

@@ -13,3 +13,5 @@ of your Google AppEngine project.
 
 I created this project to make it easier for me to get started with any new Google AppEngine projects
 in the future.
+
+You can see it running at [http://eloquent-glow.appspot.com/](http://eloquent-glow.appspot.com/)

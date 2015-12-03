@@ -1,8 +1,30 @@
 <!DOCTYPE html>
 {% autoescape true %}
 <html>
-  <body>
-    <h1>{{ greeting }}</h1>
-  </body>
+	<head>
+		<title>How to detect mobile devices</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+  	<body>
+  		<div class="container-fluid">
+  			<h1>HTTP Request Parameters</h1>
+  			<dl class="dl-horizontal">
+  				<dt>User Agent</dt>
+  				<dd>{{ user_agent }}</dd>
+  				<dt>HTTP Accept</dt>
+  				<dd>{{ http_accept }}</dd>
+  			</dl>
+	    	<h1>Device capabilities</h1>
+	    	<dl class="dl-horizontal">
+	    	{% for key, val in capabilities.iteritems() %}
+	    		<dt>{{ key }}</dt><dd>{{ val }}</dd>
+	    	{% endfor %}
+	    	</dl>
+    	</div>
+
+    	<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+  	</body>
 </html>
 {% endautoescape %}
